@@ -49,6 +49,8 @@ appears to be the Hugging Face dataset.
   TLDR.
 - [`results/scoreboard.json`](results/scoreboard.json) - machine-readable
   aggregate scoreboard.
+- [`results/blog-comparison.csv`](results/blog-comparison.csv) - compact
+  comparison to the blog's published StudyBench scores.
 - [`environments/treatment-matrix.md`](environments/treatment-matrix.md) -
   definitions for closed book, lab only, library only, and library+lab.
 - `manifests/` - per-treatment environment manifests and hashes.
@@ -63,6 +65,8 @@ appears to be the Hugging Face dataset.
 - `docs/` - methods notes, caveats, and comparison to the Machine Studying post.
 - [`docs/model-and-source-dates.md`](docs/model-and-source-dates.md) - cited
   notes on GPT-5.5 cutoff, StudyBench source pins, and target release dates.
+- [`docs/blog-comparison.md`](docs/blog-comparison.md) - comparison between the
+  Machine Studying blog's published StudyBench scores and this 2x2 matrix.
 
 The `docs/`, `manifests/`, `prompts/`, and `schemas/` directories are staging
 areas in this initial commit; their placeholder READMEs mark the intended public

@@ -1,0 +1,7 @@
+comparison,benchmark,blog_score,our_closed_book,our_lab_only,our_library_only,our_library_lab
+figure_3_gpt54_mini_best,DSPy,39.70,51.70,78.07,82.97,85.40
+figure_3_gpt54_mini_best,OpenClaw,9.70,6.35,9.70,60.30,62.05
+figure_3_gpt54_mini_best,weighted_mean_30_20,27.70,33.56,50.72,73.90,76.06
+figure_3_any_model_best,DSPy,39.70,51.70,78.07,82.97,85.40
+figure_3_any_model_best,OpenClaw,10.00,6.35,9.70,60.30,62.05
+figure_3_any_model_best,weighted_mean_30_20,27.82,33.56,50.72,73.90,76.06
