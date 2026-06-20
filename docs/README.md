@@ -1,7 +1,7 @@
 # Docs
 
-This directory will contain method notes, caveats, and comparison notes for the
-StudyBench lab/library experiment.
+This directory contains context notes for the public StudyBench lab/library
+result bundle.
 
 - [`model-and-source-dates.md`](model-and-source-dates.md) - cited cutoff,
   release-date, and pinned-source-date notes.

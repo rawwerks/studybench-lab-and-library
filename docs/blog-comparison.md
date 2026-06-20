@@ -1,7 +1,11 @@
 # Comparison To The Machine Studying Blog
 
-This note compares the published StudyBench scores in the Machine Studying blog
-with our Codex `gpt-5.5` / `xhigh` 2x2 environment matrix.
+This note compares the published StudyBench scores in the
+[Machine Studying blog](https://jacobxli.com/blog/2026/machine-studying/) with
+our [Codex CLI](https://developers.openai.com/codex/cli)
+[`gpt-5.5`](https://developers.openai.com/api/docs/models/gpt-5.5) /
+[`xhigh`](https://developers.openai.com/api/docs/guides/reasoning#reasoning-effort)
+2x2 environment matrix.
 
 ## Caveat
 
@@ -35,7 +39,11 @@ Sources:
 ## Our Matrix Versus Blog Figure 3
 
 Weighted means use the StudyBench coding-task mix: 30 DSPy questions and 20
-OpenClaw questions.
+OpenClaw questions:
+
+```text
+weighted_mean = (DSPy * 30 + OpenClaw * 20) / 50
+```
 
 | Run | DSPy | OpenClaw | Weighted mean |
 | --- | ---: | ---: | ---: |
@@ -69,9 +77,11 @@ The main result is not just that Codex `gpt-5.5` is stronger. The shape of the
   OpenClaw performance than to our library-only or library+lab OpenClaw
   performance.
 
-The conservative claim is that a modern coding agent with a richer native
-environment and static access to the pinned corpus can substantially outperform
-the blog's published ReAct baselines on the same open StudyBench questions. The
-less conservative claim, which needs more controlled replication, is that the
-blog harness materially underestimates what current coding agents can do when
-they are allowed to operate in an environment closer to normal software work.
+This repository endorses the conservative claim: a modern coding agent with a
+richer native environment and static access to the pinned corpus can
+substantially outperform the blog's published ReAct baselines on the same open
+StudyBench questions.
+
+The stronger claim would be that the blog harness materially underestimates what
+current coding agents can do when they are allowed to operate in an environment
+closer to normal software work. That claim needs more controlled replication.

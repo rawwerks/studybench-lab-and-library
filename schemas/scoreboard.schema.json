@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "studybench.lab_library.scoreboard.v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "model",
+    "reasoning_effort",
+    "counted_qid_runs",
+    "total_qid_runs",
+    "benchmarks",
+    "treatments",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "studybench.lab_library.scoreboard.v1"
+    },
+    "model": {
+      "const": "gpt-5.5"
+    },
+    "reasoning_effort": {
+      "const": "xhigh"
+    },
+    "counted_qid_runs": {
+      "const": 200
+    },
+    "total_qid_runs": {
+      "const": 200
+    },
+    "benchmarks": {
+      "type": "object",
+      "required": ["dspy", "openclaw"],
+      "additionalProperties": false,
+      "properties": {
+        "dspy": {
+          "$ref": "#/$defs/benchmark"
+        },
+        "openclaw": {
+          "$ref": "#/$defs/benchmark"
+        }
+      }
+    },
+    "treatments": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/treatment"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "benchmark": {
+      "type": "object",
+      "required": ["qid_runs_per_treatment"],
+      "additionalProperties": false,
+      "properties": {
+        "qid_runs_per_treatment": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "treatment": {
+      "type": "object",
+      "required": [
+        "id",
+        "library",
+        "lab",
+        "scores",
+        "counted_qid_runs",
+        "total_qid_runs"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "closed_book",
+            "lab_only",
+            "library_only",
+            "library_lab"
+          ]
+        },
+        "library": {
+          "type": "boolean"
+        },
+        "lab": {
+          "type": "boolean"
+        },
+        "scores": {
+          "type": "object",
+          "required": ["dspy", "openclaw", "mean"],
+          "additionalProperties": false,
+          "properties": {
+            "dspy": {
+              "$ref": "#/$defs/score"
+            },
+            "openclaw": {
+              "$ref": "#/$defs/score"
+            },
+            "mean": {
+              "$ref": "#/$defs/score"
+            }
+          }
+        },
+        "counted_qid_runs": {
+          "const": 50
+        },
+        "total_qid_runs": {
+          "const": 50
+        }
+      }
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    }
+  }
+}
