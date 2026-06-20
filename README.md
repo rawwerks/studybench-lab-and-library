@@ -33,6 +33,8 @@ best aggregate treatment.
 - [`.gitleaks.toml`](.gitleaks.toml) - default gitleaks rules plus
   publication-specific privacy checks.
 - `docs/` - methods notes, caveats, and comparison to the Machine Studying post.
+- [`docs/model-and-source-dates.md`](docs/model-and-source-dates.md) - cited
+  notes on GPT-5.5 cutoff, StudyBench source pins, and target release dates.
 
 The `docs/`, `manifests/`, `prompts/`, and `schemas/` directories are staging
 areas in this initial commit; their placeholder READMEs mark the intended public
