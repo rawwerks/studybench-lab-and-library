@@ -1,5 +1,8 @@
 # StudyBench Lab and Library
 
+Original write-up:
+[Machine Studying: The Library and the Lab](https://raw.works/machine-studying-the-library-and-the-lab/).
+
 This repository publishes the clean aggregate results for a Codex CLI
 StudyBench access-surface experiment: four treatments on DSPy and the same four
 treatments on OpenClaw.
