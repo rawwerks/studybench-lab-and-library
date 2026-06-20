@@ -22,6 +22,12 @@ Plain English:
   small probes, run them, inspect behavior, and iterate.
 - **Closed book** means neither of those is available. The agent only sees the
   question.
+- **Lab only** means no docs, no source tree, and no static study corpus. The
+  agent can only interact with the pinned runtime through the allowed lab
+  surface and infer behavior from experiments.
+- **Library only** means docs/source/static corpus are available, but no runnable
+  binary, package import, test runner, or execution surface is available. The
+  agent can read and search, but it cannot try the tool.
 - **Library + lab** means both are available: the agent can read the material and
   also run experiments against the actual pinned environment.
 
