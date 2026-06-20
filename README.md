@@ -11,6 +11,20 @@ library+lab. The strict matrix is complete: 200/200 qid-runs counted.
 | Library only | yes | no | 82.97 | 60.30 | 73.90 |
 | Library + lab | yes | yes | 85.40 | 62.05 | 76.06 |
 
+Plain English:
+
+- **Library** means the agent can read the official written material: the pinned
+  source tree, docs, package metadata, and other static corpus files we expose.
+  It is like studying the textbook and source code without being allowed to run
+  experiments.
+- **Lab** means the agent can try things against the pinned tool/runtime and
+  learn from what happens. It is like being in the lab with the equipment: write
+  small probes, run them, inspect behavior, and iterate.
+- **Closed book** means neither of those is available. The agent only sees the
+  question.
+- **Library + lab** means both are available: the agent can read the material and
+  also run experiments against the actual pinned environment.
+
 Interpretation in one sentence: for this Codex harness, library access explains
 most of the OpenClaw jump, lab access helps DSPy strongly, and library+lab is the
 best aggregate treatment.
