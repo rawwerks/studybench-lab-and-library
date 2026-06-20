@@ -1,0 +1,5 @@
+treatment,library,lab,dspy_score,openclaw_score,mean_score,counted_qid_runs,total_qid_runs
+closed_book,no,no,51.70,6.35,33.56,50,50
+lab_only,no,yes,78.07,9.70,50.72,50,50
+library_only,yes,no,82.97,60.30,73.90,50,50
+library_lab,yes,yes,85.40,62.05,76.06,50,50

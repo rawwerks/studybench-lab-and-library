@@ -1,0 +1,69 @@
+{
+  "schema": "studybench.lab_library.scoreboard.v1",
+  "model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "counted_qid_runs": 200,
+  "total_qid_runs": 200,
+  "benchmarks": {
+    "dspy": {
+      "qid_runs_per_treatment": 30
+    },
+    "openclaw": {
+      "qid_runs_per_treatment": 20
+    }
+  },
+  "treatments": [
+    {
+      "id": "closed_book",
+      "library": false,
+      "lab": false,
+      "scores": {
+        "dspy": 51.7,
+        "openclaw": 6.35,
+        "mean": 33.56
+      },
+      "counted_qid_runs": 50,
+      "total_qid_runs": 50
+    },
+    {
+      "id": "lab_only",
+      "library": false,
+      "lab": true,
+      "scores": {
+        "dspy": 78.07,
+        "openclaw": 9.7,
+        "mean": 50.72
+      },
+      "counted_qid_runs": 50,
+      "total_qid_runs": 50
+    },
+    {
+      "id": "library_only",
+      "library": true,
+      "lab": false,
+      "scores": {
+        "dspy": 82.97,
+        "openclaw": 60.3,
+        "mean": 73.9
+      },
+      "counted_qid_runs": 50,
+      "total_qid_runs": 50
+    },
+    {
+      "id": "library_lab",
+      "library": true,
+      "lab": true,
+      "scores": {
+        "dspy": 85.4,
+        "openclaw": 62.05,
+        "mean": 76.06
+      },
+      "counted_qid_runs": 50,
+      "total_qid_runs": 50
+    }
+  ],
+  "notes": [
+    "Aggregates are strict counted rows from the StudyBench 2x2 matrix run.",
+    "Raw traces and internal audit artifacts are intentionally excluded from this public-facing bundle."
+  ]
+}

@@ -1,0 +1,22 @@
+title = "studybench-lab-and-library gitleaks config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "private-local-home-path"
+description = "Local home-directory paths should not appear in public-facing artifacts."
+regex = '''(?i)(/(?:home|users)/[a-z0-9._-]+/|~/(?:scratch|documents|raw-agent-private|github-rawwerks|github)/|[a-z]:\\users\\[a-z0-9._-]+\\)'''
+tags = ["privacy", "local-path"]
+
+[[rules]]
+id = "raw-agent-private-reference"
+description = "References to private agent workspaces should not be published."
+regex = '''(?i)raw-agent-private'''
+tags = ["privacy", "internal"]
+
+[[rules]]
+id = "scratch-workspace-reference"
+description = "Scratch workspace paths should not be published."
+regex = '''(?i)(/(?:tmp|var/folders)/|(?:^|[/\\])scratch[/\\]|scratch/studybench|studybench-env-research|studybench-env|matrix-v1)'''
+tags = ["privacy", "internal"]
