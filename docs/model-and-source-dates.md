@@ -18,13 +18,23 @@ provided library and lab surfaces.
 ## Notes
 
 - The OpenAI model page discloses GPT-5.5's knowledge cutoff as December 1,
-  2025. It does not separately disclose a precise training-data cutoff or
-  training mixture boundary.
-- The Machine Studying post states a GPT-5.5 cutoff of August 31, 2025 in its
-  literature-review discussion. For this report, treat the OpenAI model page as
-  the authoritative current source for the official model knowledge cutoff, and
-  treat the blog value as a cited discrepancy rather than the controlling date.
+  2025 (verified live on the page: "Dec 01, 2025 knowledge cutoff"). It does not
+  separately disclose a precise training-data cutoff or training mixture
+  boundary.
+- Conflict (sources, not a transcription error): the Machine Studying post
+  states GPT-5.5's knowledge cutoff as August 31, 2025 in its literature-review
+  discussion, ~3 months earlier than OpenAI's official December 1, 2025. The
+  blog post is internally consistent and correctly cited here; the conflict is
+  between Li's stated figure and OpenAI's model page. For this report, treat the
+  OpenAI model page as the authoritative current source for the official model
+  knowledge cutoff, and treat the blog value as a cited discrepancy rather than
+  the controlling date.
   Source: [Machine Studying](https://jacobxli.com/blog/2026/machine-studying/).
+- Scope note: in the Machine Studying post, GPT-5.5 appears only in the
+  Studying-Literature task (Figures 7-8, GPT-5.1 vs GPT-5.5). The DSPy and
+  OpenClaw experiments we replicate here used GPT-5.1 and GPT-5.4-mini, not 5.5,
+  so our GPT-5.5 DSPy/OpenClaw runs have no direct counterpart in the original
+  post.
 - StudyBench pins DSPy to
   `9cdb0aac28b2a04b064e40697ccd301872cf6a43`, which is after the `3.1.3`
   release tag. In local git terms this is `3.1.3-78-g9cdb0aac`; therefore the
