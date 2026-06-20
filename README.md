@@ -13,23 +13,16 @@ library+lab. The strict matrix is complete: 200/200 qid-runs counted.
 
 Plain English:
 
-- **Library** means the agent can read the official written material: the pinned
-  source tree, docs, package metadata, and other static corpus files we expose.
-  It is like studying the textbook and source code without being allowed to run
-  experiments.
-- **Lab** means the agent can try things against the pinned tool/runtime and
-  learn from what happens. It is like being in the lab with the equipment: write
-  small probes, run them, inspect behavior, and iterate.
-- **Closed book** means neither of those is available. The agent only sees the
-  question.
-- **Lab only** means no docs, no source tree, and no static study corpus. The
-  agent can only interact with the pinned runtime through the allowed lab
-  surface and infer behavior from experiments.
-- **Library only** means docs/source/static corpus are available, but no runnable
-  binary, package import, test runner, or execution surface is available. The
-  agent can read and search, but it cannot try the tool.
-- **Library + lab** means both are available: the agent can read the material and
-  also run experiments against the actual pinned environment.
+- **Closed book**: the agent only sees the question. It gets no docs, no source
+  tree, no package metadata, and no runtime to experiment with.
+- **Lab only**: the agent gets no docs, no source tree, and no static study
+  corpus. It can only learn by running small probes against the pinned
+  tool/runtime through the allowed lab surface.
+- **Library only**: the agent can read and search the official static material:
+  pinned source tree, docs, package metadata, and exposed corpus files. It cannot
+  run the package, import it, execute tests, or use a binary/runtime.
+- **Library + lab**: the agent gets both surfaces. It can read the official
+  static material and also run experiments against the pinned environment.
 
 Interpretation in one sentence: for this Codex harness, library access explains
 most of the OpenClaw jump, lab access helps DSPy strongly, and library+lab is the
