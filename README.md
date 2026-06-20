@@ -4,6 +4,13 @@ TLDR: we ran StudyBench with Codex `gpt-5.5`, reasoning effort `xhigh`, across a
 2x2 treatment matrix: no library/no lab, lab only, library only, and
 library+lab. The strict matrix is complete: 200/200 qid-runs counted.
 
+Model note: our best current guess for the `gpt-5.5` knowledge cutoff is
+December 1, 2025, because the official
+[OpenAI GPT-5.5 model page](https://developers.openai.com/api/docs/models/gpt-5.5)
+lists that date as the knowledge cutoff. `xhigh` is the reasoning effort used
+with `gpt-5.5`; we do not treat it as a separate model snapshot, and OpenAI does
+not disclose an exact training-data mixture boundary.
+
 | Treatment | Library | Lab | DSPy | OpenClaw | Mean |
 | --- | --- | --- | ---: | ---: | ---: |
 | Closed book | no | no | 51.70 | 6.35 | 33.56 |
