@@ -11,7 +11,7 @@ library+lab. The strict matrix is complete: 200/200 qid-runs counted.
 | Library only | yes | no | 82.97 | 60.30 | 73.90 |
 | Library + lab | yes | yes | 85.40 | 62.05 | 76.06 |
 
-Plain English:
+The four environments:
 
 - **Closed book**: the agent only sees the question. It gets no docs, no source
   tree, no package metadata, and no runtime to experiment with.
@@ -27,6 +27,21 @@ Plain English:
 Interpretation in one sentence: for this Codex harness, library access explains
 most of the OpenClaw jump, lab access helps DSPy strongly, and library+lab is the
 best aggregate treatment.
+
+## Upstream Links
+
+- [Machine Studying blog post](https://jacobxli.com/blog/2026/machine-studying/)
+  by Jacob Xiaochen Li, Rick Battle, and Omar Khattab.
+- [StudyBench Hugging Face dataset](https://huggingface.co/datasets/jacobli/studybench).
+- Source repositories referenced by the StudyBench dataset:
+  [DSPy](https://github.com/stanfordnlp/dspy) at
+  [`9cdb0aac`](https://github.com/stanfordnlp/dspy/commit/9cdb0aac28b2a04b064e40697ccd301872cf6a43)
+  and [OpenClaw](https://github.com/openclaw/openclaw) at
+  [`da228660`](https://github.com/openclaw/openclaw/commit/da228660306b55a9cce3b973946f3aacfc515848).
+
+As of June 20, 2026, I did not find a separate official StudyBench GitHub repo
+linked from the blog or Hugging Face dataset; the public benchmark artifact
+appears to be the Hugging Face dataset.
 
 ## Index
 
